@@ -13,11 +13,10 @@
 	<body>
 		<h1>Form Survey</h1>
 		<div>
-			<!-- Menambahkan tag form utama dengan id agar tombol submit berfungsi -->
 			<form
 				id="survey-form"
 				action=""
-				method="POST">
+				method="GET">
 				<!-- Nama -->
 				<div>
 					<label for="input-name">Siapa nama anda?</label>
@@ -130,6 +129,31 @@
 					<button type="reset">Reset</button>
 				</div>
 			</form>
+		</div>
+		<br />
+		<div>
+			<table
+				border="1"
+				width="100%">
+				<thead>
+					<tr>
+						<th>Nama</th>
+						<th>Umur</th>
+						<th>Gender</th>
+						<th>Perokok</th>
+						<th>Jenis Rokok</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id="tabel-name"></td>
+						<td id="tabel-umur"></td>
+						<td id="tabel-gender"></td>
+						<td id="tabel-perokok"></td>
+						<td id="tabel-rokok"></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
 </html>
