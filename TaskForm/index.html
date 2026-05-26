@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Form Survey Perokok" />
+		<title>Form Survey</title>
+	</head>
+	<body>
+		<h1>Form Survey</h1>
+		<div>
+			<!-- Menambahkan tag form utama dengan id agar tombol submit berfungsi -->
+			<form
+				id="survey-form"
+				action=""
+				method="POST">
+				<!-- Nama -->
+				<div>
+					<label for="input-name">Siapa nama anda?</label>
+					<div>
+						<input
+							type="text"
+							id="input-name"
+							name="name"
+							required />
+					</div>
+				</div>
+
+				<!-- Umur -->
+				<div>
+					<label for="input-umur">Berapa umur anda?</label>
+					<div>
+						<input
+							type="number"
+							id="input-umur"
+							name="umur"
+							required />
+					</div>
+				</div>
+
+				<!-- Gender -->
+				<div>
+					<label>Gender:</label>
+					<div>
+						<input
+							type="radio"
+							id="gender-l"
+							name="gender"
+							value="laki-laki"
+							checked />
+						<label for="gender-l">Laki-laki</label>
+						<input
+							type="radio"
+							id="gender-p"
+							name="gender"
+							value="perempuan" />
+						<label for="gender-p">Perempuan</label>
+					</div>
+				</div>
+
+				<!-- Status Perokok -->
+				<div>
+					<label>Apakah anda perokok?</label>
+					<div>
+						<input
+							type="radio"
+							id="perokok-ya"
+							name="perokok"
+							value="ya"
+							checked />
+						<label for="perokok-ya">Ya</label>
+
+						<input
+							type="radio"
+							id="perokok-tidak"
+							name="perokok"
+							value="tidak" />
+						<label for="perokok-tidak">Tidak</label>
+					</div>
+				</div>
+
+				<!-- Jenis Rokok -->
+				<div>
+					<label>Jika anda perokok, rokok apa yang anda pernah coba?</label>
+					<div>
+						<input
+							type="checkbox"
+							id="rokok-gg"
+							name="jenis-rokok"
+							value="gudang-garam" />
+						<label for="rokok-gg">Gudang Garam Filter</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							id="rokok-ls"
+							name="jenis-rokok"
+							value="lukky-strike" />
+						<label for="rokok-ls">Lucky Strike</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							id="rokok-mb"
+							name="jenis-rokok"
+							value="marlboro" />
+						<label for="rokok-mb">Marlboro</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							id="rokok-es"
+							name="jenis-rokok"
+							value="esse" />
+						<label for="rokok-es">Esse</label>
+					</div>
+				</div>
+
+				<!-- Tombol Aksi -->
+				<div>
+					<button
+						type="submit"
+						form="survey-form">
+						Submit
+					</button>
+					<button type="reset">Reset</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
