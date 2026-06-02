@@ -6,4 +6,4 @@ Contoh Layout Form yang diambil :
 
 ![alt text](3.jpg)
 
-Hasil dari Implementasi Layouting dengan CSS ![alt text](127.0.0.1_5501_index.html.png)
+Hasil dari Implementasi Layouting dengan CSS ![alt text](screenshot.png)
