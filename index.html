@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>Survey Perokok</title>
+	</head>
+
+	<body>
+		<div class="container-form">
+			<div class="container-title">
+				<h1>Survey Perokok</h1>
+				<p>Silakan isi formulir berikut dengan lengkap.</p>
+			</div>
+
+			<form action="">
+				<!-- Nama -->
+				<div class="card">
+					<h3>Nama <span>*</span></h3>
+
+					<input
+						type="text"
+						name="nama"
+						placeholder="Your Answer"
+						required />
+				</div>
+
+				<!-- Umur -->
+				<div class="card">
+					<h3>Umur <span>*</span></h3>
+
+					<input
+						type="number"
+						name="umur"
+						placeholder="Masukkan umur"
+						required />
+				</div>
+
+				<!-- Jenis Kelamin -->
+				<div class="card">
+					<h3>Jenis Kelamin <span>*</span></h3>
+
+					<div class="option">
+						<input
+							type="radio"
+							id="gender-l"
+							name="gender"
+							value="laki-laki"
+							required />
+
+						<label for="gender-l"> Laki-laki </label>
+					</div>
+
+					<div class="option">
+						<input
+							type="radio"
+							id="gender-p"
+							name="gender"
+							value="perempuan" />
+
+						<label for="gender-p"> Perempuan </label>
+					</div>
+				</div>
+
+				<!-- Status Perokok -->
+				<div class="card">
+					<h3>Apakah anda perokok? <span>*</span></h3>
+
+					<div class="option">
+						<input
+							type="radio"
+							id="perokok-ya"
+							name="perokok"
+							value="ya"
+							required />
+
+						<label for="perokok-ya"> Ya </label>
+					</div>
+
+					<div class="option">
+						<input
+							type="radio"
+							id="perokok-tidak"
+							name="perokok"
+							value="tidak" />
+
+						<label for="perokok-tidak"> Tidak </label>
+					</div>
+				</div>
+
+				<!-- Jenis Rokok -->
+				<div class="card">
+					<h3>Jika anda perokok, rokok apa yang pernah anda coba?</h3>
+
+					<div class="option">
+						<input
+							type="checkbox"
+							id="gg"
+							name="jenis_rokok[]"
+							value="Gudang Garam" />
+
+						<label for="gg"> Gudang Garam Filter </label>
+					</div>
+
+					<div class="option">
+						<input
+							type="checkbox"
+							id="ls"
+							name="jenis_rokok[]"
+							value="Lucky Strike" />
+
+						<label for="ls"> Lucky Strike </label>
+					</div>
+
+					<div class="option">
+						<input
+							type="checkbox"
+							id="mb"
+							name="jenis_rokok[]"
+							value="Marlboro" />
+
+						<label for="mb"> Marlboro </label>
+					</div>
+
+					<div class="option">
+						<input
+							type="checkbox"
+							id="es"
+							name="jenis_rokok[]"
+							value="Esse" />
+
+						<label for="es"> Esse </label>
+					</div>
+				</div>
+
+				<div class="button-container">
+					<button type="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
