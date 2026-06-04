@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>Survey Perokok</title>
+	</head>
+	<body>
+		<script>
+			const body = document.querySelector("body");
+			const divContainerForm = document.createElement("div");
+			divContainerForm.setAttribute("class", "container-form");
+			const divContainer = document.createElement("div");
+			divContainer.setAttribute("class", "container-title");
+
+			divContainerForm.appendChild(divContainer);
+
+			const heading1 = document.createElement("h1");
+			heading1.textContent = "Survey Perokok";
+
+			const paragraph = document.createElement("p");
+			paragraph.textContent = "Silahkan isi formulir berikut dengan lengkap.";
+
+			divContainer.appendChild(heading1);
+			divContainer.appendChild(paragraph);
+
+			const form = document.createElement("form");
+			const labelNama = document.createElement("div");
+			labelNama.setAttribute("class", "card");
+			const heading3 = document.createElement("h3");
+			heading3.textContent = "Nama";
+			const span = document.createElement("span");
+			span.textContent = "*";
+
+			labelNama.appendChild(heading3);
+			heading3.appendChild(span);
+
+			const inputNama = document.createElement("input");
+			inputNama.setAttribute("type", "text");
+			inputNama.setAttribute("name", "nama");
+			inputNama.setAttribute("placeholder", "Nama Kamu");
+			inputNama.setAttribute("required", "true");
+
+			labelNama.appendChild(inputNama);
+			form.appendChild(labelNama);
+
+			const labelUmur = document.createElement("div");
+			labelUmur.setAttribute("class", "card");
+			const h3Umur = document.createElement("h3");
+			h3Umur.textContent = "Umur";
+			const spanUmur = document.createElement("span");
+			spanUmur.textContent = "*";
+
+			labelUmur.appendChild(h3Umur);
+			h3Umur.appendChild(spanUmur);
+
+			const inputUmur = document.createElement("input");
+			inputUmur.setAttribute("type", "number");
+			inputUmur.setAttribute("name", "umur");
+			inputUmur.setAttribute("placeholder", "Masukkan umur");
+			inputUmur.setAttribute("required", "true");
+
+			labelUmur.appendChild(inputUmur);
+			form.appendChild(labelUmur);
+
+			const labelGender = document.createElement("div");
+			labelGender.setAttribute("class", "card");
+			const h3Gender = document.createElement("h3");
+			h3Gender.textContent = "Jenis Kelamin";
+			const spanGender = document.createElement("span");
+			spanGender.textContent = "*";
+
+			labelGender.appendChild(h3Gender);
+			h3Gender.appendChild(spanGender);
+
+			const divOption = document.createElement("div");
+			divOption.setAttribute("class", "option");
+
+			const inputPria = document.createElement("input");
+			inputPria.setAttribute("type", "radio");
+			inputPria.setAttribute("id", "gender-l");
+			inputPria.setAttribute("name", "gender");
+			inputPria.setAttribute("value", "Laki-Laki");
+
+			const labelPria = document.createElement("label");
+			labelPria.setAttribute("for", "gender-l");
+			labelPria.textContent = "Laki-Laki";
+
+			divOption.appendChild(inputPria);
+			divOption.appendChild(labelPria);
+
+			const inputPerempuan = document.createElement("input");
+			inputPerempuan.setAttribute("type", "radio");
+			inputPerempuan.setAttribute("id", "gender-p");
+			inputPerempuan.setAttribute("name", "gender");
+			inputPerempuan.setAttribute("value", "perempuan");
+
+			const labelWanita = document.createElement("label");
+			labelWanita.setAttribute("for", "gender-p");
+			labelWanita.textContent = "Perempuan";
+
+			divOption.appendChild(inputPerempuan);
+			divOption.appendChild(labelWanita);
+
+			labelGender.appendChild(divOption);
+			form.appendChild(labelGender);
+
+			const labelPerokok = document.createElement("div");
+			labelPerokok.setAttribute("class", "card");
+			const h3Perokok = document.createElement("h3");
+			h3Perokok.textContent = "Apakah anda perokok?";
+			const spanPerokok = document.createElement("span");
+			spanPerokok.textContent = "*";
+
+			labelPerokok.appendChild(h3Perokok);
+			h3Perokok.appendChild(spanPerokok);
+
+			const divOptionPerokok = document.createElement("div");
+			divOptionPerokok.setAttribute("class", "option");
+
+			const inputYa = document.createElement("input");
+			inputYa.setAttribute("type", "radio");
+			inputYa.setAttribute("id", "perokok-ya");
+			inputYa.setAttribute("name", "perokok");
+			inputYa.setAttribute("value", "ya");
+
+			const labelYa = document.createElement("label");
+			labelYa.setAttribute("for", "perokok-ya");
+			labelYa.textContent = "Ya";
+
+			divOptionPerokok.appendChild(inputYa);
+			divOptionPerokok.appendChild(labelYa);
+
+			const inputTidak = document.createElement("input");
+			inputTidak.setAttribute("type", "radio");
+			inputTidak.setAttribute("id", "perokok-tidak");
+			inputTidak.setAttribute("name", "perokok");
+			inputTidak.setAttribute("value", "tidak");
+
+			const labelTidak = document.createElement("label");
+			labelTidak.setAttribute("for", "perokok-tidak");
+			labelTidak.textContent = "Tidak";
+
+			divOptionPerokok.appendChild(inputTidak);
+			divOptionPerokok.appendChild(labelTidak);
+
+			labelPerokok.appendChild(divOptionPerokok);
+			form.appendChild(labelPerokok);
+
+			const labelJenisRokok = document.createElement("div");
+			labelJenisRokok.setAttribute("class", "card");
+			const h3JenisRokok = document.createElement("h3");
+			h3JenisRokok.textContent = "Jika anda perokok, rokok apa yang pernah anda coba?";
+			const spanJenisRokok = document.createElement("span");
+			spanJenisRokok.textContent = "*";
+
+			labelJenisRokok.appendChild(h3JenisRokok);
+			h3JenisRokok.appendChild(spanJenisRokok);
+
+			const divOptionJenisRokok = document.createElement("div");
+			divOptionJenisRokok.setAttribute("class", "option");
+
+			const inputGudangGaram = document.createElement("input");
+			inputGudangGaram.setAttribute("type", "checkbox");
+			inputGudangGaram.setAttribute("id", "gg");
+			inputGudangGaram.setAttribute("name", "jenis_rokok[]");
+			inputGudangGaram.setAttribute("value", "Gudang Garam");
+
+			const labelGudangGaram = document.createElement("label");
+			labelGudangGaram.setAttribute("for", "gg");
+			labelGudangGaram.textContent = "Gudang Garam Filter";
+
+			divOptionJenisRokok.appendChild(inputGudangGaram);
+			divOptionJenisRokok.appendChild(labelGudangGaram);
+
+			const inputLuckyStrike = document.createElement("input");
+			inputLuckyStrike.setAttribute("type", "checkbox");
+			inputLuckyStrike.setAttribute("id", "ls");
+			inputLuckyStrike.setAttribute("name", "jenis_rokok[]");
+			inputLuckyStrike.setAttribute("value", "Lucky Strike");
+
+			const labelLuckyStrike = document.createElement("label");
+			labelLuckyStrike.setAttribute("for", "ls");
+			labelLuckyStrike.textContent = "Lucky Strike";
+
+			divOptionJenisRokok.appendChild(inputLuckyStrike);
+			divOptionJenisRokok.appendChild(labelLuckyStrike);
+
+			const inputMarlboro = document.createElement("input");
+			inputMarlboro.setAttribute("type", "checkbox");
+			inputMarlboro.setAttribute("id", "mb");
+			inputMarlboro.setAttribute("name", "jenis_rokok[]");
+			inputMarlboro.setAttribute("value", "Marlboro");
+
+			const labelMarlboro = document.createElement("label");
+			labelMarlboro.setAttribute("for", "mb");
+			labelMarlboro.textContent = "Marlboro";
+
+			divOptionJenisRokok.appendChild(inputMarlboro);
+			divOptionJenisRokok.appendChild(labelMarlboro);
+
+			labelJenisRokok.appendChild(divOptionJenisRokok);
+			form.appendChild(labelJenisRokok);
+
+			const inputEsse = document.createElement("input");
+			inputEsse.setAttribute("type", "checkbox");
+			inputEsse.setAttribute("id", "es");
+			inputEsse.setAttribute("name", "jenis_rokok[]");
+			inputEsse.setAttribute("value", "Esse");
+
+			const labelEsse = document.createElement("label");
+			labelEsse.setAttribute("for", "es");
+			labelEsse.textContent = "Esse";
+
+			divOptionJenisRokok.appendChild(inputEsse);
+			divOptionJenisRokok.appendChild(labelEsse);
+
+			labelJenisRokok.appendChild(divOptionJenisRokok);
+			form.appendChild(labelJenisRokok);
+
+			const buttonSubmit = document.createElement("button");
+			buttonSubmit.setAttribute("type", "submit");
+			buttonSubmit.textContent = "Submit";
+
+			form.appendChild(buttonSubmit);
+			divContainerForm.appendChild(form);
+			body.appendChild(divContainerForm);
+		</script>
+	</body>
+</html>
