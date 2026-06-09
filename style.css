@@ -9,7 +9,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	background-color: rgb(255, 231, 165);
+	background-color: rgba(255, 231, 165, 0.836);
 	font-family: "Poppins", sans-serif;
 	padding: 30px 0;
 }
@@ -44,12 +44,20 @@ form {
 .card {
 	width: 800px;
 	background-color: white;
+	display: flex;
+	flex-direction: column;
 	border-radius: 10px;
 	padding: 25px;
 	margin: 0 auto 20px;
 }
 
 .card h3 {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.name {
 	font-size: 18px;
 	font-weight: 500;
 	margin-bottom: 20px;
@@ -91,6 +99,9 @@ label {
 }
 
 .button-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 800px;
 	margin: 0 auto;
 }
@@ -107,6 +118,112 @@ button {
 	font-family: inherit;
 }
 
+button:last-child {
+	border: none;
+	background-color: transparent;
+	color: orange;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 500;
+	cursor: pointer;
+	font-family: inherit;
+}
+
 button:hover {
 	opacity: 0.9;
+}
+
+.text-show-table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.text-show-table a {
+	border: none;
+	text-decoration: none;
+	color: orange;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+/* TABEL  */
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	color: #333;
+}
+
+.table-wrapper {
+	overflow-x: auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+	width: 100%;
+	min-width: 1000px;
+	border-collapse: collapse;
+}
+
+thead {
+	background-color: dodgerblue;
+	color: white;
+}
+
+th,
+td {
+	padding: 12px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+	background-color: #eaf2ff;
+	transition: 0.3s;
+}
+
+.btn {
+	display: inline-block;
+	margin-top: 1.5rem;
+	padding: 10px 20px;
+	background-color: #2563eb;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 1rem;
+	}
+
+	th,
+	td {
+		padding: 8px;
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
 }

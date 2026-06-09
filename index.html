@@ -32,10 +32,16 @@
 				<p>Silakan isi formulir berikut dengan lengkap.</p>
 			</div>
 
-			<form action="">
+			<form
+				action=""
+				id="surveyForm">
 				<!-- Nama -->
 				<div class="card">
-					<h3>Nama <span>*</span></h3>
+					<label
+						for="nama"
+						class="name"
+						>Nama <span>*</span></label
+					>
 
 					<input
 						type="text"
@@ -46,7 +52,7 @@
 
 				<!-- Umur -->
 				<div class="card">
-					<h3>Umur <span>*</span></h3>
+					<label for="umur">Umur <span>*</span></label>
 
 					<input
 						type="number"
@@ -65,7 +71,7 @@
 							id="gender-l"
 							name="gender"
 							value="laki-laki"
-							required />
+							checked />
 
 						<label for="gender-l"> Laki-laki </label>
 					</div>
@@ -90,8 +96,7 @@
 							type="radio"
 							id="perokok-ya"
 							name="perokok"
-							value="ya"
-							required />
+							value="ya" />
 
 						<label for="perokok-ya"> Ya </label>
 					</div>
@@ -101,7 +106,8 @@
 							type="radio"
 							id="perokok-tidak"
 							name="perokok"
-							value="tidak" />
+							value="tidak"
+							checked />
 
 						<label for="perokok-tidak"> Tidak </label>
 					</div>
@@ -115,7 +121,7 @@
 						<input
 							type="checkbox"
 							id="gg"
-							name="jenis_rokok[]"
+							name="jenis_rokok"
 							value="Gudang Garam" />
 
 						<label for="gg"> Gudang Garam Filter </label>
@@ -125,8 +131,8 @@
 						<input
 							type="checkbox"
 							id="ls"
-							name="jenis_rokok[]"
-							value="Lucky Strike" />
+							name="jenis_rokok"
+							value="LuckyStrike" />
 
 						<label for="ls"> Lucky Strike </label>
 					</div>
@@ -135,7 +141,7 @@
 						<input
 							type="checkbox"
 							id="mb"
-							name="jenis_rokok[]"
+							name="jenis_rokok"
 							value="Marlboro" />
 
 						<label for="mb"> Marlboro </label>
@@ -145,7 +151,7 @@
 						<input
 							type="checkbox"
 							id="es"
-							name="jenis_rokok[]"
+							name="jenis_rokok"
 							value="Esse" />
 
 						<label for="es"> Esse </label>
@@ -154,8 +160,14 @@
 
 				<div class="button-container">
 					<button type="submit">Submit</button>
+					<button type="reset">Reset</button>
+				</div>
+
+				<div class="text-show-table">
+					<a href="tabelData.html">Show Table Result Survey</a>
 				</div>
 			</form>
 		</div>
+		<script src="app.js"></script>
 	</body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
@@ -9,100 +9,63 @@
 			name="description"
 			content="Form Survey Perokok" />
 		<title>Data Survey Perokok</title>
+
+		<link
+			rel="stylesheet"
+			href="style.css" />
 	</head>
 	<body>
-		<div>
-			<table
-				border="1"
-				width="100%">
-				<thead>
-					<tr>
-						<th>Nama</th>
-						<th>Umur</th>
-						<th>Gender</th>
-						<th>Perokok</th>
-						<th>Jenis Rokok</th>
-					</tr>
-				</thead>
-				<tbody align="center">
-					<tr>
-						<td>Zidan</td>
-						<td>20</td>
-						<td>Laki - Laki</td>
-						<td>Ya</td>
-						<td>Gudang Garam Filter</td>
-					</tr>
-					<tr>
-						<td>Adi</td>
-						<td>22</td>
-						<td>Laki - Laki</td>
-						<td>Tidak</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td>Maya</td>
-						<td>27</td>
-						<td>Perempuan</td>
-						<td>Tidak</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td>Agil</td>
-						<td>30</td>
-						<td>Laki - Laki</td>
-						<td>Ya</td>
-						<td>Marlboro</td>
-					</tr>
-					<tr>
-						<td>Putri</td>
-						<td>21</td>
-						<td>Perempuan</td>
-						<td>Tidak</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td>Putra</td>
-						<td>20</td>
-						<td>Laki - Laki</td>
-						<td>Ya</td>
-						<td>Marlboro</td>
-					</tr>
-					<tr>
-						<td>Cindy</td>
-						<td>22</td>
-						<td>Perempuan</td>
-						<td>Ya</td>
-						<td>Gudang Garam Filter</td>
-					</tr>
-					<tr>
-						<td>Adel</td>
-						<td>28</td>
-						<td>Perempuan</td>
-						<td>Ya</td>
-						<td>Lucky Strike</td>
-					</tr>
-					<tr>
-						<td>Putros</td>
-						<td>28</td>
-						<td>Laki - Laki</td>
-						<td>Tidak</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td>Beckham</td>
-						<td>25</td>
-						<td>Laki - Laki</td>
-						<td>Ya</td>
-						<td>Esse</td>
-					</tr>
-				</tbody>
-			</table>
+		<div class="container">
+			<h1>Data Survey Perokok</h1>
+
+			<div class="table-wrapper">
+				<table>
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Nama</th>
+							<th>Umur</th>
+							<th>Gender</th>
+							<th>Perokok</th>
+							<th>Jenis Rokok</th>
+						</tr>
+					</thead>
+
+					<tbody></tbody>
+				</table>
+			</div>
+
+			<a
+				href="index.html"
+				class="btn">
+				Kembali
+			</a>
 		</div>
-		<br />
-		<div>
-			<button type="button">
-				<a href="index.html"> Kembali</a>
-			</button>
-		</div>
+		<script>
+			const tbody = document.querySelector("tbody");
+			const surveys = JSON.parse(localStorage.getItem("data-survey")) || [];
+
+			surveys.forEach((survey, idx) => {
+				const tr = document.createElement("tr");
+				const col1 = document.createElement("td");
+				col1.textContent = idx + 1;
+				const col2 = document.createElement("td");
+				col2.textContent = survey.fullname;
+				const col3 = document.createElement("td");
+				col3.textContent = survey.umur;
+				const col4 = document.createElement("td");
+				col4.textContent = survey.gender;
+				const col5 = document.createElement("td");
+				col5.textContent = survey.perokok;
+				const col6 = document.createElement("td");
+				if (survey.jenisRokok.length === 0 || !survey.jenisRokok) {
+					col6.textContent = "-";
+				}
+				col6.textContent = survey.jenisRokok.join(", ");
+
+				tr.append(col1, col2, col3, col4, col5, col6);
+				tbody.appendChild(tr);
+			});
+		</script>
 	</body>
 </html>
