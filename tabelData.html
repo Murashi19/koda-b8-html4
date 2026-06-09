@@ -10,24 +10,22 @@
 			content="Form Survey Perokok" />
 		<title>Data Survey Perokok</title>
 
-		<link
-			rel="stylesheet"
-			href="style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
-	<body>
-		<div class="container">
-			<h1>Data Survey Perokok</h1>
+	<body class="flex justify-center h-screen w-screen bg-orange-200">
+		<div class="max-w-7xl h-screen flex p-20 my-10 mx-auto flex-col">
+			<h1 class="text-4xl font-semibold mb-5 text-center text-black-500">Data Survey Perokok</h1>
 
-			<div class="table-wrapper">
-				<table>
-					<thead>
+			<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+				<table class="min-w-5xl text-sm text-center text-white bg-blue-500 border-collapse">
+					<thead class="bg-blue-600 text-white">
 						<tr>
-							<th>No</th>
-							<th>Nama</th>
-							<th>Umur</th>
-							<th>Gender</th>
-							<th>Perokok</th>
-							<th>Jenis Rokok</th>
+							<th class="p-3 text-center border-1 border-b-[#dddddd]">No</th>
+							<th class="p-3 text-center border-1 border-b-[#dddddd]">Nama</th>
+							<th class="p-3 text-center border-1 border-b-[#dddddd]">Umur</th>
+							<th class="p-3 text-center border-1 border-b-[#dddddd]">Gender</th>
+							<th class="p-3 text-center border-1 border-b-[#dddddd]">Perokok</th>
+							<th class="p-3 text-center border-1 border-b-[#dddddd]">Jenis Rokok</th>
 						</tr>
 					</thead>
 
@@ -37,7 +35,7 @@
 
 			<a
 				href="index.html"
-				class="btn">
+				class="w-max no-underline text-lg font-medium cursor-pointer text-white bg-blue-500 hover:bg-blue-600 py-2 px-10 mt-5 rounded-lg">
 				Kembali
 			</a>
 		</div>

@@ -19,31 +19,31 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
 			rel="stylesheet" />
 
-		<link
-			rel="stylesheet"
-			href="style.css" />
 		<title>Survey Perokok</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
 
-	<body>
-		<div class="container-form">
-			<div class="container-title">
-				<h1>Survey Perokok</h1>
-				<p>Silakan isi formulir berikut dengan lengkap.</p>
+	<body class="flex justify-center p-5 px-0 h-screen w-screen bg-orange-200">
+		<div class="w-3xl">
+			<div class="w-3xl bg-white p-10 my-10 mx-auto rounded-lg border-t-10 border-orange-300">
+				<h1 class="text-4xl font-semibold mb-5">Survey Perokok</h1>
+				<p class="text-gray-500">Silakan isi formulir berikut dengan lengkap.</p>
 			</div>
 
 			<form
 				action=""
-				id="surveyForm">
+				id="surveyForm"
+				class="flex flex-col">
 				<!-- Nama -->
-				<div class="card">
+				<div class="w-3xl bg-white flex flex-col p-10 mx-auto mb-10 rounded-lg">
 					<label
 						for="nama"
-						class="name"
-						>Nama <span>*</span></label
+						class="text-lg font-semibold mb-5"
+						>Nama <span class="text-red-500">*</span></label
 					>
 
 					<input
+						class="w-full p-3 border-b-2 border-gray-400 focus:outline-none focus:border-orange-300"
 						type="text"
 						name="nama"
 						placeholder="Your Answer"
@@ -51,10 +51,15 @@
 				</div>
 
 				<!-- Umur -->
-				<div class="card">
-					<label for="umur">Umur <span>*</span></label>
+				<div class="w-3xl bg-white flex flex-col p-10 mx-auto mb-10 rounded-lg">
+					<label
+						class="text-lg font-semibold mb-5"
+						for="umur"
+						>Umur <span class="text-red-500">*</span></label
+					>
 
 					<input
+						class="w-full p-3 border-b-2 border-gray-400 focus:outline-none focus:border-orange-300"
 						type="number"
 						name="umur"
 						placeholder="Masukkan umur"
@@ -62,11 +67,12 @@
 				</div>
 
 				<!-- Jenis Kelamin -->
-				<div class="card">
-					<h3>Jenis Kelamin <span>*</span></h3>
+				<div class="w-3xl bg-white flex flex-col p-10 mx-auto mb-10 rounded-lg">
+					<label class="text-lg font-semibold mb-5">Jenis Kelamin <span>*</span></label>
 
-					<div class="option">
+					<div class="flex items-center mb-5 gap-4">
 						<input
+							class="cursor-pointer"
 							type="radio"
 							id="gender-l"
 							name="gender"
@@ -76,8 +82,9 @@
 						<label for="gender-l"> Laki-laki </label>
 					</div>
 
-					<div class="option">
+					<div class="flex items-center gap-4">
 						<input
+							class="cursor-pointer"
 							type="radio"
 							id="gender-p"
 							name="gender"
@@ -88,11 +95,12 @@
 				</div>
 
 				<!-- Status Perokok -->
-				<div class="card">
-					<h3>Apakah anda perokok? <span>*</span></h3>
+				<div class="w-3xl bg-white flex flex-col p-10 mx-auto mb-10 rounded-lg">
+					<label class="text-lg font-semibold mb-5">Apakah anda perokok? <span class="text-red-500">*</span></label>
 
-					<div class="option">
+					<div class="flex items-center mb-5 gap-4">
 						<input
+							class="cursor-pointer"
 							type="radio"
 							id="perokok-ya"
 							name="perokok"
@@ -101,8 +109,9 @@
 						<label for="perokok-ya"> Ya </label>
 					</div>
 
-					<div class="option">
+					<div class="flex items-center gap-4">
 						<input
+							class="cursor-pointer"
 							type="radio"
 							id="perokok-tidak"
 							name="perokok"
@@ -114,11 +123,12 @@
 				</div>
 
 				<!-- Jenis Rokok -->
-				<div class="card">
-					<h3>Jika anda perokok, rokok apa yang pernah anda coba?</h3>
+				<div class="w-3xl bg-white flex flex-col p-10 mx-auto mb-10 rounded-lg">
+					<label class="text-lg font-semibold mb-5">Jika anda perokok, rokok apa yang pernah anda coba?</label>
 
-					<div class="option">
+					<div class="flex items-center mb-1 gap-4">
 						<input
+							class="cursor-pointer"
 							type="checkbox"
 							id="gg"
 							name="jenis_rokok"
@@ -127,8 +137,9 @@
 						<label for="gg"> Gudang Garam Filter </label>
 					</div>
 
-					<div class="option">
+					<div class="flex items-center mb-1 gap-4">
 						<input
+							class="cursor-pointer"
 							type="checkbox"
 							id="ls"
 							name="jenis_rokok"
@@ -137,8 +148,9 @@
 						<label for="ls"> Lucky Strike </label>
 					</div>
 
-					<div class="option">
+					<div class="flex justify-start items-center mb-1 gap-4">
 						<input
+							class="cursor-pointer"
 							type="checkbox"
 							id="mb"
 							name="jenis_rokok"
@@ -147,8 +159,9 @@
 						<label for="mb"> Marlboro </label>
 					</div>
 
-					<div class="option">
+					<div class="flex items-center gap-4">
 						<input
+							class="cursor-pointer"
 							type="checkbox"
 							id="es"
 							name="jenis_rokok"
@@ -158,13 +171,25 @@
 					</div>
 				</div>
 
-				<div class="button-container">
-					<button type="submit">Submit</button>
-					<button type="reset">Reset</button>
+				<div class="flex justify-between items-center w-3xl mx-auto my-0">
+					<button
+						class="py-2 px-10 border-none rounded-lg bg-orange-400 hover:bg-orange-500 text-white text-sm cursor-pointer"
+						type="submit">
+						Submit
+					</button>
+					<button
+						class="border-none bg-transparent text-orange-500 font-medium font-(family-name: inherit)"
+						type="reset">
+						Reset
+					</button>
 				</div>
 
-				<div class="text-show-table">
-					<a href="tabelData.html">Show Table Result Survey</a>
+				<div class="flex justify-center items-center mb-5">
+					<a
+						href="tabelData.html"
+						class="no-underline text-lg font-medium cursor-pointer text-orange-500"
+						>Show Table Result Survey</a
+					>
 				</div>
 			</form>
 		</div>
